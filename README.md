@@ -114,7 +114,7 @@ Enterprise-Healthcare-Risk-Intelligence-System/
 
 ### 🎯 Classification Accuracy
 
-<img src="Screenshots/Classification-accuracy.png" width="650">
+<img src="Screenshots/Classification accuracy.png" width="650">
 
 ---
 
