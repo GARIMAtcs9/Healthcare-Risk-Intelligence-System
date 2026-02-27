@@ -110,6 +110,32 @@ Enterprise-Healthcare-Risk-Intelligence-System/
 
 ---
 
+## 📸 Visual Outputs
+
+### 🎯 Classification Accuracy
+
+<img src="screenshots/Classification-accuracy.png" width="650">
+
+---
+
+### 🔎 Confusion Matrix
+
+<img src="screenshots/Confusion-matrix.png" width="650">
+
+---
+
+### 📈 Feature Importance (Random Forest)
+
+<img src="screenshots/Feature-importance.png" width="650">
+
+---
+
+### 📊 Tableau Dashboard Preview
+
+<img src="screenshots/Tableau-dashboard.jpg" width="650">
+
+---
+
 ## 📊 Model Performance
 
 **Model:** Random Forest  
