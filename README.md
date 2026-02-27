@@ -1,102 +1,55 @@
+
 # 🏥 Enterprise Pharmacovigilance Risk Intelligence System
 
+### TCS iON AIP-225 Industry Project
 
+Machine learning pipeline for pharmacovigilance risk analysis, structured data validation, feature engineering, severity prediction, and executive dashboard development.
 
-Internship Project — TCS iON AIP-225
+---
 
+## 📌 About the Project
 
+This project simulates an enterprise pharmacovigilance environment where adverse drug reaction (ADR) data is:
 
-An end-to-end enterprise healthcare analytics system designed to analyze Adverse Drug Reaction (ADR) data, classify severity levels using machine learning, and generate executive-level risk insights through structured dashboards.
+- Validated using governance rules  
+- Standardized into severity categories  
+- Modeled using machine learning  
+- Visualized through executive dashboards  
 
-##📌 Table of Contents
+Objective: Convert raw ADR records into structured risk intelligence.
 
-About the Project
+---
 
-Problem Statement
+## 🎯 Problem Statement
 
-Features
+Design a system capable of:
 
-Architecture
+- Ensuring ADR data quality  
+- Predicting severity levels  
+- Identifying high-risk drugs and demographics  
+- Supporting safety signal detection  
 
-Tech Stack
+---
 
-Project Structure
+## ✨ Key Features
 
-Model Performance
+| Feature | Description |
+|----------|-------------|
+| Data Governance | Missing value checks, validation rules |
+| Severity Modeling | Multi-class classification |
+| Random Forest Model | Ensemble-based risk prediction |
+| Feature Importance | Interpretability support |
+| Tableau Dashboard | Executive risk monitoring |
+| Risk Escalation Rule | High-risk probability flagging |
 
-Tableau Dashboard
+---
 
-Getting Started
-
-Author
-
-📖 About the Project
-
-
-
-This project was developed as part of the TCS iON Industry Project Programme (AIP-225).
-
-
-
-Pharmacovigilance systems handle large volumes of adverse drug event reports. Without structured governance and predictive modeling, identifying high-risk safety signals becomes difficult and delayed.
-
-
-
-This system integrates:
-
-Data governance and validation
-
-Severity standardization (Mild, Moderate, Severe, Critical)
-
-Feature engineering on demographic and drug-level attributes
-
-Machine learning-based severity prediction
-
-Executive-level dashboard visualization
-
-
-
-The objective is to transform raw ADR case records into structured, decision-ready risk intelligence.
-
-🎯 Problem Statement
-
-
-
-To design and implement an enterprise-grade pharmacovigilance analytics system capable of:
-
-Ensuring structured data quality validation
-
-Predicting ADR severity using machine learning
-
-Identifying high-risk drug and demographic patterns
-
-Supporting data-driven safety monitoring and signal detection
-
-✨ Features
-
-✅ Structured data cleaning and validation pipeline
-
-✅ Severity classification modeling
-
-✅ Multi-model comparison (Logistic Regression, Random Forest, Gradient Boosting)
-
-🚀 Random Forest–based severity prediction
-
-📊 Tableau dashboard for executive risk monitoring
-
-📈 Feature importance analysis
-
-🔎 Rule-based high-risk escalation logic
-
-🏗 Architecture
-
-
-
+## 🏗 Architecture
 ADR Dataset
 
 ↓
 
-Data Cleaning & Governance Validation
+Data Cleaning & Validation
 
 ↓
 
@@ -108,188 +61,96 @@ Train-Test Split (80:20)
 
 ↓
 
-Model Training (Random Forest)
+Random Forest Model
 
 ↓
 
-Model Evaluation
+Evaluation Metrics
 
 ↓
 
-Risk Intelligence Dashboard (Tableau Public)
+Tableau Dashboard
 
-🛠 Tech Stack
+---
 
+## 🛠 Tech Stack
 
+**Machine Learning**
+- Python
+- Pandas
+- NumPy
+- Scikit-learn
+- Matplotlib
+- Seaborn
 
-Machine Learning & Data Processing
+**Platform**
+- Google Colab
 
-Python
+**Visualization**
+- Tableau Public
 
-Pandas
+---
 
-NumPy
-
-Scikit-learn
-
-Matplotlib
-
-Seaborn
-
-
-
-Platform
-
-Google Colab (Jupyter Notebook)
-
-
-
-Visualization
-
-Tableau Public
-
-📂 Project Structure
-
+## 📂 Project Structure
 Enterprise-Healthcare-Risk-Intelligence-System/
+
 │
+
 ├── Risk_analysis.ipynb
+
 ├── README.md
+
 └── screenshots/
-    ├── severity_distribution.png
-    ├── confusion_matrix.png
-    ├── tableau_dashboard.png
-📊 Model Performance
 
+├── severity_distribution.png
 
+├── confusion_matrix.png
 
-Final Model Selected: Random Forest Classifier
+├── tableau_dashboard.png
 
+---
 
+## 📊 Model Performance
 
-Hyperparameters:
+**Model:** Random Forest  
+n_estimators = 150  
+max_depth = 12  
 
-n_estimators = 150
+### Performance Metrics
 
-max_depth = 12
+- Accuracy: 78.2%
+- Macro F1-Score: 0.22
+- Weighted F1-Score: 0.69
 
-random_state = 42
+### Key Observation
 
-🔎 Overall Performance
+The model performs strongly on the dominant severity class but shows reduced sensitivity for minority classes due to class imbalance.
 
-Accuracy: 78.2%
+---
 
-Macro Average F1-Score: 0.22
+## 📈 Tableau Dashboard
 
-Weighted Average F1-Score: 0.69
+Interactive dashboard includes:
 
-📈 Classification Insights
+- Severity distribution  
+- High-risk rate by drug  
+- Risk trend across age groups  
+- Predicted vs actual severity  
 
+🔗 Tableau Link: https://public.tableau.com/app/profile/garima3548/vizzes
 
+---
 
-The model demonstrates strong predictive performance for the dominant severity class (Class 1):
+## ▶ Getting Started
 
-Precision (Class 1): 0.78
+1. Clone repository  
+2. Open notebook in Google Colab  
+3. Upload dataset  
+4. Run all cells  
 
-Recall (Class 1): 1.00
+---
 
-F1-Score (Class 1): 0.88
+## 👩‍💻 Author
 
-
-
-However, minority classes (0, 2, 3) show near-zero precision and recall due to significant class imbalance in the dataset.
-
-
-
-Dataset distribution (Test Set Example):
-
-Class 1: 15,639 samples
-
-Class 0: 697 samples
-
-Class 2: 815 samples
-
-Class 3: 2,849 samples
-
-
-
-This indicates that while overall accuracy is high, the model is biased toward the majority class.
-
-⚠️ Observed Limitation
-
-
-
-The dataset exhibits strong class imbalance, resulting in:
-
-Majority class dominance
-
-Poor minority-class detection
-
-Inflated overall accuracy
-
-
-
-In regulated healthcare environments, this limitation must be addressed before production deployment.
-
-🚀 Improvement Scope
-
-
-
-To enhance minority severity detection:
-
-Class weighting during training
-
-SMOTE (Synthetic Minority Oversampling)
-
-Balanced Random Forest
-
-Threshold tuning for high-risk escalation
-
-Multi-class optimization strategies
-
-📈 Tableau Dashboard
-
-
-
-The interactive Tableau dashboard provides:
-
-Severity distribution analysis
-
-High-risk rate by drug
-
-Risk trend across age groups
-
-Predicted vs actual severity comparison
-
-
-
-🔗 Tableau Public Link:
-
-(Paste your link here)
-
-▶ Getting Started
-
-Clone the repository
-
-Open Risk_analysis.ipynb in Google Colab
-
-Upload the dataset
-
-Run all cells sequentially
-
-
-
-Google Colab Link:
-
-(Paste your Colab link here)
-
-👩‍💻 Author
-
-
-
-Garima
-
+Garima  
 TCS iON AIP-225 Intern
-
-Enterprise Healthcare Risk Intelligence — Batch 01
-
-
