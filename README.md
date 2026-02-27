@@ -8,7 +8,7 @@ Internship Project — TCS iON AIP-225
 
 An end-to-end enterprise healthcare analytics system designed to analyze Adverse Drug Reaction (ADR) data, classify severity levels using machine learning, and generate executive-level risk insights through structured dashboards.
 
-#📌 Table of Contents
+##📌 Table of Contents
 
 About the Project
 
